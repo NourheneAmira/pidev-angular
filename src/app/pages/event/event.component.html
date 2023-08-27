@@ -1,0 +1,27 @@
+<nb-card>
+  <nb-card-body>
+    <div class="example-container col-sm-6 col-md-4 col-xl-3 col-xxxl-2">
+      <div class="container-btn">
+        <button (click)="openWindow()" class="btn btn-hero-success" nbButton ><i class="fas fa-user-plus"></i></button>
+  
+   </div>
+  </div>
+  <br>
+<nb-card>
+<nb-card-header class="text-center">
+  <h3 style="font-style:italic;">Event</h3> 
+
+</nb-card-header>
+
+<nb-card-body>
+  <ng2-smart-table class="full-width text-center"
+  [settings]="settings"
+  [source]="source"
+  (deleteConfirm)="onDeleteConfirm($event)"
+  (custom)="onCustom($event)" style="width: max-content;">
+  </ng2-smart-table>
+  
+</nb-card-body>
+</nb-card>
+</nb-card-body>
+</nb-card>

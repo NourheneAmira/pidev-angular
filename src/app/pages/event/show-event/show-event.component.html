@@ -1,0 +1,85 @@
+<div class="container-fluid" style="width:700px; height: 500px">
+    <div class="row">
+      <div class="col-lg-12">
+        <nb-card>
+      
+          <nb-card-body>
+           
+                  <h3> Titre : {{event.title}} </h3>
+                 
+                  <div class="row full-name-inputs">
+                    <div class="col-lg-6">
+                    
+                      <div *ngIf=retrievedImage>
+                        <img [src]="retrievedImage" width="320" height="380">
+                       </div>
+                   
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="row full-name-inputs">
+                    <div class="input-group col-md-5 col-lg-5 input-group-sm">
+                      <input type="text" placeholder="type" class="form-control"
+                             [(ngModel)]="event.entry_price" name="type"disabled/>
+                    </div>
+                  
+                   <div class="input-group col-md-7 col-lg-7 input-group-sm">
+                     <input type="text" placeholder="Address" class="form-control"
+                             [(ngModel)]="event.event_start_heure" name="address" disabled/>
+                    </div>
+                  </div>
+                  <label>Code:</label> 
+                  <div class="input-group input-group-sm">
+                  <input type="text" placeholder="Code" class="form-control" 
+                  [(ngModel)]="event.date_event" name="code"  disabled/>
+                  </div>
+                
+                  <label>Email:</label> 
+                  <div class="input-group input-group-sm">
+                    <input type="email" placeholder="email" class="form-control"
+                    [(ngModel)]="event.date_final_reservation" name="email" disabled />
+                  </div>
+                  <label>Phone:</label> 
+                  <div class="input-group input-group-sm">
+                    <input type="tel" placeholder="numero" class="form-control"
+                    [(ngModel)]="event.event_fin_heure" name="phone" disabled/>
+                  </div>
+                    <label>CIN:</label> 
+                    <div class="input-group input-group-sm">
+                    <input type="number" placeholder="CIN" class="form-control"
+                           [(ngModel)]="event.nbr_interssants" name="cin"disabled/>
+                  </div>
+                  <label>Kilometrage Par Centre:</label> 
+                  <div class="input-group input-group-sm">
+                  <input type="text" placeholder="KilometrageParCentre" class="form-control"
+                         [(ngModel)]="event.nbr_invites" name="KilometrageParCentre"disabled/>
+                </div>
+              </div> 
+             
+            
+            </div>
+           
+               
+                 
+          </nb-card-body>
+        </nb-card>
+    
+    
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     

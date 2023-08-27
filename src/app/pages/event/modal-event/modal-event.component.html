@@ -1,0 +1,172 @@
+
+ <div class="container-fluid" style="width:800px; height: 440px">
+
+  <form class="form-group" autocomplete="off" #myForm=ngForm>
+    <div class="col-lg-12">
+       <nb-card>
+         <nb-card-body>        
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-3 col-lg-3 input-group-sm">  
+              <div class="preview text-center">
+                <img class="preview-img" src="http://simpleicon.com/wp-content/uploads/account.png" alt="Preview Image" width="110" height="110"/>
+                <div class="browse-button">
+                    <i class="fa fa-pencil-alt"></i> 
+                    <input class="browse-input" type="file" required name="UploadedFile" (change)="onFileChanged($event)"  id="UploadedFile"/>
+                     </div>
+                <span class="Error"></span>
+              </div>
+           </div>
+           
+           
+        <div class="input-group col-md-9 col-lg-9 input-group-sm">
+           <div class="input-group col-md-12 col-lg-12 input-group-sm">
+                <div class="input-group col-md-12 col-lg-12 input-group-sm">
+                  <div class="input-group col-md-3 col-lg-3 input-group-sm">
+                    <label>Date Event:</label>
+                  </div>
+                  <div class="input-group col-md-9 col-lg-9 input-group-sm">
+                    <input type="date" placeholder="date_event" name="code" class="form-control"
+                           [(ngModel)]="eventt.date_event" required/>
+                  </div>
+                  
+                  
+                    </div>
+              </div>
+              <div class="input-group col-md-12 col-lg-12 input-group-sm">
+                <div class="input-group col-md-12 col-lg-12 input-group-sm">
+                  <div class="input-group col-md-3 col-lg-3 input-group-sm">
+                    <label>Event start heure:</label>
+                  </div>
+                  <div class="input-group col-md-9 col-lg-9 input-group-sm">
+                     <input type="date" placeholder="event_start_heure" class="form-control"
+                    [(ngModel)]="eventt.event_start_heure" name="nom" required/>
+          
+                  </div>
+                  
+                    </div>
+              </div>
+              
+              <div class="input-group col-md-12 col-lg-12 input-group-sm">
+                <div class="input-group col-md-12 col-lg-12 input-group-sm">
+                  <div class="input-group col-md-3 col-lg-3 input-group-sm">
+                    <label>Event fin heure:</label>
+                  </div>
+                  <div class="input-group col-md-9 col-lg-9 input-group-sm">
+                     <input type="date" placeholder="event_fin_heure" class="form-control" 
+                    [(ngModel)]="eventt.event_fin_heure" name="dateNaissance"  required />
+         
+                  </div>
+                  
+                    </div>
+              </div>
+          </div>
+           
+      </div>
+       
+    <hr>    
+
+ <!---------------------------------------------------------------->         
+          <div class="row full-name-inputs">
+            <div class="input-group col-md-4 col-lg-4 input-group-sm">
+                    <input type="text" placeholder="title" class="form-control"
+                    [(ngModel)]="eventt.title" name="fax" required />
+          
+                  </div>
+            <div class="input-group col-md-4 col-lg-4 input-group-sm">
+              <input type="text" placeholder="Entry_price" class="form-control"
+                    [(ngModel)]="eventt.entry_price" name="mail" required />
+                       </div>
+            <div class="input-group col-md-4 col-lg-4 input-group-sm">
+              <input type="text" placeholder="Description" class="form-control" 
+              [(ngModel)]="eventt.description" name="dateNaissance"  required />
+   
+ 
+            </div>
+          </div>
+<!---------------------------------------------------------------->
+           <div class="row full-name-inputs">
+               <div class="input-group col-md-6 col-lg-6 input-group-sm">
+                      <input type="number" placeholder="Nombre de places" class="form-control"
+                         [(ngModel)]="eventt.nbr_places" name="adress"required/>
+                </div>
+                <div class="input-group col-md-6 col-lg-6 input-group-sm">
+                  <input type="text" placeholder="Budget" class="form-control"
+                  [(ngModel)]="eventt.event_budget" name="tel" required />
+                     </div>
+
+            </div>
+ <!---------------------------------------------------------------->         
+ <div class="row full-name-inputs">
+  <div class="input-group col-md-4 col-lg-4 input-group-sm">
+    <ng-select [items]="location"
+    bindLabel="titre"
+    name="category"
+    [(ngModel)]="eventt.location_event"
+    placeholder="{{'planningTournee.planningOrdonnancement'|translate}}"
+    style="width:100%;"
+    require
+    required>
+</ng-select>
+
+        </div>
+  <div class="input-group col-md-4 col-lg-4 input-group-sm">
+    <ng-select [items]="etatEvent"
+    bindLabel="titre"
+    name="category"
+    [(ngModel)]="eventt.etat_event"
+    placeholder="{{'planningTournee.planningOrdonnancement'|translate}}"
+    style="width:100%;"
+    require
+    required>
+</ng-select>
+  
+  </div>
+  <div class="input-group col-md-4 col-lg-4 input-group-sm">
+    <ng-select [items]="category"
+    bindLabel="titre"
+    name="category"
+    [(ngModel)]="eventt.category"
+    placeholder="{{'planningTournee.planningOrdonnancement'|translate}}"
+    style="width:100%;"
+    require
+    required>
+</ng-select>
+
+  </div>
+</div>
+<!---------------------------------------------------------------->
+<div class="row full-name-inputs">
+  <div class="input-group col-md-6 col-lg-6 input-group-sm">
+         <input type="date" placeholder="Nombre de places" class="form-control"
+            [(ngModel)]="eventt.date_final_reservation" name="adress"required/>
+   </div>
+   <div class="input-group col-md-6 col-lg-6 input-group-sm">
+    <ng-select [items]="typEvent"
+    bindLabel="titre"
+    name="category"
+    [(ngModel)]="eventt.type_event"
+    placeholder="{{'planningTournee.planningOrdonnancement'|translate}}"
+    style="width:100%;"
+    require
+    required>
+</ng-select>   
+  </div>
+
+</div>
+
+<!---------------------------------------------------------------->    
+<div style="text-align:right;">
+  <button nbButton #Ajouter style="background-color:rgb(96, 180, 96);cursor: pointer;margin: 0.5rem;align-content: center;"
+  [disabled]=!myForm.valid   (click)="onAddEvent()"         >{{A}}</button>
+  <button nbButton style="background-color:rgb(173, 50, 50);cursor: pointer;margin: 0.5rem;align-content: center;"  >Annuler</button>
+</div>
+<!---------------------------------------------------------------->    
+      
+         </nb-card-body>
+       </nb-card>
+       
+     </div>
+    
+  </form> 
+ </div>  
+ 

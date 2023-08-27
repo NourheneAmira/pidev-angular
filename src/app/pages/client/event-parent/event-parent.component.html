@@ -1,0 +1,56 @@
+<nb-card>
+  <nb-card-header class="text-center">
+    <h3 style="font-style:italic;">{{'event.list1'|translate}}</h3> 
+  
+  </nb-card-header>
+  <nb-card-body>
+   
+<nb-card>
+<nb-card-body>
+ 
+  <div *ngFor="let thing of classem"> 
+
+  
+   
+     
+        <nb-card style="background-color:whitesmoke;width:300px;height:300px; float: left; margin-right: 30px;">
+          <nb-card-header style="
+          color: brown;">{{thing.title}}   </nb-card-header>
+          <nb-card-body>
+            <div class="row">
+            <div class="col-lg-12">
+              <div *ngIf=retrievedImage>
+                <img [src]="retrievedImage" width="200" height="100">
+               </div>
+          </div>
+        
+          <div class="col-lg-12">
+            {{'event.type_event'|translate}}{{thing.type_event}}
+          <br>
+          {{'event.date_event'|translate}}: {{thing.date_event}}
+           <br>
+           {{'event.nbrparticipants'|translate}}:{{thing.nbrparticipants}}
+            <br>
+        </div>
+        </div> 
+        <nb-card-footer>
+          <div style="text-align:right;">
+            <button nbButton style="background-color:rgb(235, 217, 115);cursor: pointer;margin: 0.5rem;align-content: center;"  (click)="AddInter(thing.idEvent)"><i class="fas fa-thumbs-up"></i></button>
+         
+            <button nbButton #Ajouter style="background-color:rgb(96, 180, 96);cursor: pointer;margin: 0.5rem;align-content: center;" (click)="AddParticipant(thing.idEvent)"><i class="fas fa-user-plus"></i></button>
+                    
+            <button nbButton style="background-color:rgb(173, 50, 50);cursor: pointer;margin: 0.5rem;align-content: center;"  (click)="AnnulerInter(thing.idEvent)"><i class="far fa-thumbs-down"></i></button>
+          </div>
+        </nb-card-footer>
+          </nb-card-body>
+        </nb-card>
+        </div>
+        
+      
+        </nb-card-body>
+        </nb-card>
+        </nb-card-body>
+        </nb-card>   
+        
+           
+
